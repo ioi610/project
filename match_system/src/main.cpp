@@ -14,9 +14,9 @@ using namespace ::apache::thrift::protocol;
 using namespace ::apache::thrift::transport;
 using namespace ::apache::thrift::server;
 
-using namespace  ::match_service;
-
 using namespace std;
+
+using namespace  ::match_service;
 
 class MatchHandler : virtual public MatchIf {
 	public:

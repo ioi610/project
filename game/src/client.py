@@ -1,5 +1,6 @@
 from match_client.match import Match
 from match_client.match.ttypes import User
+
 from thrift import Thrift
 from thrift.transport import TSocket
 from thrift.transport import TTransport
@@ -17,7 +18,7 @@ def main():
     protocol = TBinaryProtocol.TBinaryProtocol(transport)
 
     # Create a client to use the protocol encoder
-    client = Calculator.Client(protocol)
+    client = Match.Client(protocol)
 
     # Connect!
     transport.open()
@@ -25,7 +26,6 @@ def main():
     user = User(1, 'yxc', 1500)
     client.add_user(user, "")
 
-    # Close!
     transport.close()
 
 if __name__ == "__main__":
